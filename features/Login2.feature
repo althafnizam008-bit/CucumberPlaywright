@@ -11,5 +11,5 @@ Scenario: Invalid Login
     Then User should login successfully2
 
     Then page should idle for 2 seconds
-    //check git hub
+    
     

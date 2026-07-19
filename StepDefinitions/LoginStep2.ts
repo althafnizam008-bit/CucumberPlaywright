@@ -2,11 +2,13 @@ import { Given, Then, Before, After, When } from "@cucumber/cucumber";
 import { chromium, Browser, Page } from "@playwright/test";
 import { LoginPage } from "../pages/LoginPage";
 import { page } from "../Hooks/Hooks";
+import { ConfigReader } from "../config/ConfigurationReader.";
 
 
 
-Given('User launches the application2', function () {
- page.goto("https://automationpractice.techwithjatin.com/");   
+
+Given('User launches the application2', async function () {
+ await page.goto(ConfigReader.get('BASEURL'));   
  
 });
 
